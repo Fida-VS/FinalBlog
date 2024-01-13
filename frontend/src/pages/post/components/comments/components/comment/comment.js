@@ -47,7 +47,7 @@ const CommentContainer = ({ className, postId, id, author, publishedAt, content 
 							size="18px"
 							onClick={() => {}}
 						/>
-						{publishedAt}
+						{publishedAt.substring(0, 16).replace('T', ' ')}
 					</div>
 				</div>
 				<div className="comment-text">{content}</div>
@@ -91,7 +91,7 @@ export const Comment = styled(CommentContainer)`
 
 Comment.propTypes = {
 	postId: PropTypes.string.isRequired,
-	id: PropTypes.number.isRequired,
+	id: PropTypes.string.isRequired,
 	author: PropTypes.string.isRequired,
 	content: PropTypes.string.isRequired,
 	publishedAt: PropTypes.string.isRequired,

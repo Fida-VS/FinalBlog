@@ -36,8 +36,8 @@ const userRole = useSelector(selectUserRole);
 	return (
 		<div className={className}>
 				<div className="published-at">
-					{ publishedAt && <Icon inactive={true} id="fa-calendar" margin="0 7px 0 0" size="18px" />}
-					{publishedAt}
+					{ publishedAt.substring(0, 16).replace('T', ' ') && <Icon inactive={true} id="fa-calendar" margin="0 7px 0 0" size="18px" />}
+					{publishedAt.substring(0, 16).replace('T', ' ')}
 				</div>
 				{isAdmin && (<div className="buttons">
 				{editButton}

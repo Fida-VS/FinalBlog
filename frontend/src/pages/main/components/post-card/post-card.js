@@ -25,7 +25,7 @@ const PostCardContainer = ({
 								margin="0 7px 0 0"
 								size="18px"
 							/>
-						{publishedAt}
+						{publishedAt.substring(0, 16).replace('T', ' ')}
 					</div>
 					<div className="comments-count">
 					<Icon
